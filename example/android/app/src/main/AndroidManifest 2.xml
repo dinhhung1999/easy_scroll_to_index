@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dinhhung.easy_scroll_to_index">
+    package="com.dinhhung.example">
    <application
-        android:label="easy_scroll_to_index"
+        android:label="example"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
