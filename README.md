@@ -1,16 +1,41 @@
 # easy_scroll_to_index
 
-A new Flutter project.
+A new Flutter package support scroll to index for Listview, Gridview and NestedScrollView
 
-## Getting Started
+### Demo
 
-This project is a starting point for a Flutter application.
+|   |   |   |
+|---|---|---|
+|![](./demo/demo.gif) |
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Example:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Display on UI
+
+To display on UI, currently you can use `EasyScrollToIndex`.
+
+Example:
+```     
+            final ScrollToIndexController _controller = ScrollToIndexController();
+
+            EasyScrollToIndex(
+              controller: _controller,
+              itemCount: 100,
+              width: 50,
+              height: 100,
+              itemBuilder: (BuildContext context, int index) {
+               return Container(
+                 width: 50,
+                 height: 100,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black,width: 1),
+                  ),
+                  child: Center(child: Text('item '+ index.toString())),
+                );
+              },
+            ),
+
+```
+
+

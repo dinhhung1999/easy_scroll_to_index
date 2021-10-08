@@ -14,7 +14,6 @@ class EasyScrollToIndexExample extends StatefulWidget {
 class EasyScrollToIndexExampleState extends State<EasyScrollToIndexExample> {
   static const TAG = 'EasyScrollToIndexExample';
   final ScrollToIndexController _controller = ScrollToIndexController();
-  final TextEditingController _textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
