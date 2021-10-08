@@ -1,8 +1,10 @@
 name: easy_scroll_to_index
-description: A new Flutter project.
+description: A new Flutter package support scroll to index for Listview, Gridview and NestedScrollView
+homepage: https://github.com/dinhhung1999/easy_scroll_to_index
+repository: https://github.com/dinhhung1999/easy_scroll_to_index
+issue_tracker: https://github.com/dinhhung1999/easy_scroll_to_index/issues
+documentation: https://github.com/dinhhung1999/easy_scroll_to_index
 
-
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
