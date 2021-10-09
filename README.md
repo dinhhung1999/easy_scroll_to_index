@@ -1,12 +1,14 @@
 # easy_scroll_to_index
 
 A new Flutter package support scroll to index for Listview, Gridview and NestedScrollView
+
+
 Author: DinhVanHung
 ### Demo
 
-|   |   |   |
-|---|---|---|
-|![](./demo/demo.gif) | |![](./demo/demo-horizontal.gif) |
+|   |   |
+|---|---|
+|![](./demo/demo.gif) |![](./demo/demo-horizontal.gif) |
 
 
 Example:
