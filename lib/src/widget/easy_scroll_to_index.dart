@@ -1,43 +1,50 @@
-
-
-
-import 'dart:developer' as developer;
 import 'package:flutter/material.dart';
 
 class EasyScrollToIndex extends StatefulWidget {
-  static const path = 'EasyScrollToIndex';
-
-  final double width;
-  final double height;
-  final Axis? scrollDirection ;
+  final double itemWidth;
+  final double itemHeight;
+  final Axis? scrollDirection;
   final IndexedWidgetBuilder itemBuilder;
   final int itemCount;
   final bool? addAutomaticKeepAlives;
   final Duration? duration;
   final ScrollToIndexController? controller;
-  const EasyScrollToIndex({Key? key, this.addAutomaticKeepAlives, required this.width, required this.height, required this.itemCount, required this.itemBuilder, this.scrollDirection,this.duration, this.controller}) : super(key: key);
+  const EasyScrollToIndex(
+      {Key? key,
+      this.addAutomaticKeepAlives,
+      required this.itemWidth,
+      required this.itemHeight,
+      required this.itemCount,
+      required this.itemBuilder,
+      this.scrollDirection,
+      this.duration,
+      this.controller})
+      : super(key: key);
 
   @override
   _EasyScrollToIndexState createState() => _EasyScrollToIndexState();
 }
 
-
 class _EasyScrollToIndexState extends State<EasyScrollToIndex> {
-  static const TAG = 'EasyScrollToIndex';
   final ScrollController _scrollController = ScrollController();
 
-  easyScrollToIndex({required int index}){
-    if(index>widget.itemCount) return;
-    if(widget.scrollDirection==null) {
-      _scrollController.animateTo(index * widget.height.toDouble(),
-          duration: widget.duration??const Duration(milliseconds: 1000),
+  easyScrollToIndex({required int index}) {
+    if (index > widget.itemCount) return;
+    if (widget.scrollDirection == null) {
+      _scrollController.animateTo(index * widget.itemHeight.toDouble(),
+          duration: widget.duration ?? const Duration(milliseconds: 1000),
           curve: Curves.linear);
-    } else if(widget.scrollDirection == Axis.horizontal) {
-      _scrollController.animateTo(index * widget.width.toDouble(),
-          duration: widget.duration??const Duration(milliseconds: 1000),
+    } else if (widget.scrollDirection == Axis.horizontal) {
+      _scrollController.animateTo(index * widget.itemWidth.toDouble(),
+          duration: widget.duration ?? const Duration(milliseconds: 1000),
+          curve: Curves.linear);
+    } else {
+      _scrollController.animateTo(index * widget.itemHeight.toDouble(),
+          duration: widget.duration ?? const Duration(milliseconds: 1000),
           curve: Curves.linear);
     }
   }
+
   @override
   void initState() {
     super.initState();
@@ -51,6 +58,7 @@ class _EasyScrollToIndexState extends State<EasyScrollToIndex> {
       setController();
     }
   }
+
   void setController() {
     widget.controller?.setState(this);
   }
@@ -58,18 +66,17 @@ class _EasyScrollToIndexState extends State<EasyScrollToIndex> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        height: MediaQuery.of(context).size.height,
-        child: ListView.builder(
-            addAutomaticKeepAlives: widget.addAutomaticKeepAlives??false ,
-            scrollDirection: widget.scrollDirection??Axis.vertical,
-            controller: _scrollController,
-            itemCount: widget.itemCount,
-            itemBuilder: widget.itemBuilder
-        ),
-      )
-    );
-
+        child: Container(
+      height: widget.scrollDirection == Axis.vertical || widget.scrollDirection == null
+          ? MediaQuery.of(context).size.height
+          : widget.itemHeight,
+      child: ListView.builder(
+          addAutomaticKeepAlives: widget.addAutomaticKeepAlives ?? false,
+          scrollDirection: widget.scrollDirection ?? Axis.vertical,
+          controller: _scrollController,
+          itemCount: widget.itemCount,
+          itemBuilder: widget.itemBuilder),
+    ));
   }
 }
 
@@ -83,5 +90,4 @@ class ScrollToIndexController {
   void setState(_EasyScrollToIndexState state) {
     _scrollToIndexState = state;
   }
-
 }

@@ -31,10 +31,11 @@ class EasyScrollToIndexExampleState extends State<EasyScrollToIndexExample> {
         child: Column(
           children: [
             EasyScrollToIndex(
-              controller: _controller,
-              itemCount: 100,
-              width: 50,
-              height: 100,
+              controller: _controller,            // ScrollToIndexController
+              scrollDirection: Axis.horizontal,   // default Axis.vertical
+              itemCount: 100,                     // itemCount
+              itemWidth: 50,
+              itemHeight: 100,
               itemBuilder: (BuildContext context, int index) {
                return Container(
                  width: 50,
