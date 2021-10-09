@@ -5,3 +5,7 @@
 # 1.0.1
 
 - support scroll to index horizontal list
+
+# 1.0.1+1
+
+- -docs: Update example
