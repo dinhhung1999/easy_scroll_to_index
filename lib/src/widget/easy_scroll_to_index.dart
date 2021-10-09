@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class EasyScrollToIndex extends StatefulWidget {
-  final double itemWidth;
-  final double itemHeight;
-  final Axis? scrollDirection;
-  final IndexedWidgetBuilder itemBuilder;
-  final int itemCount;
-  final bool? addAutomaticKeepAlives;
-  final Duration? duration;
-  final ScrollToIndexController? controller;
+  final double itemWidth;                   /// item witdh
+  final double itemHeight;                  /// item height
+  final Axis? scrollDirection;              /// scroll direction
+  final IndexedWidgetBuilder itemBuilder;   /// item buider
+  final int itemCount;                      /// item count
+  final bool? addAutomaticKeepAlives;       /// keep alives list default false
+  final Duration? duration;                 /// duration scroll
+  final ScrollToIndexController? controller;/// ScrollToIndexController
   const EasyScrollToIndex(
       {Key? key,
       this.addAutomaticKeepAlives,
@@ -67,7 +67,8 @@ class _EasyScrollToIndexState extends State<EasyScrollToIndex> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
         child: Container(
-      height: widget.scrollDirection == Axis.vertical || widget.scrollDirection == null
+      height: widget.scrollDirection == Axis.vertical ||
+              widget.scrollDirection == null
           ? MediaQuery.of(context).size.height
           : widget.itemHeight,
       child: ListView.builder(
