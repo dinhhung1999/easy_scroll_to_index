@@ -6,6 +6,6 @@
 
 - support scroll to index horizontal list
 
-# 1.0.1+1
+# 1.0.2
 
 - -docs: Update example
