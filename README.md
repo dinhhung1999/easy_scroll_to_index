@@ -6,9 +6,7 @@ A new Flutter package support scroll to index for Listview, Gridview and NestedS
 Author: DinhVanHung
 ### Demo
 
-|   |   |
-|---|---|
-|![](./demo/demo.gif)|![](./demo/demo-horizontal.gif)|
+![](./demo/demo.gif)![](./demo/demo-horizontal.gif)
 
 
 Example:
