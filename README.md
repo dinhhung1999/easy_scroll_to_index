@@ -8,7 +8,7 @@ Author: DinhVanHung
 
 |   |   |
 |---|---|
-|![](./demo/demo.gif) |![](./demo/demo-horizontal.gif) |
+|![](./demo/demo.gif)|![](./demo/demo-horizontal.gif)|
 
 
 Example:
@@ -63,5 +63,10 @@ Example:
                 );
               },
             ),
+```
+
+- scroll to index:
+```
+          _controller.easyScrollToIndex(index: 50);
 ```
 
