@@ -6,11 +6,11 @@ A new Flutter package support scroll to index for Listview, Gridview and NestedS
 Author: DinhVanHung
 ### Demo
 
+
 <table>
   <tr>
-    <td><img src="https://github.com/dinhhung1999/easy_scroll_to_index/blob/main/demo/demo.gif" alt="Scroll to index vertical" width="300" height="540"></td>
-    <td><img src="https://github.com/dinhhung1999/easy_scroll_to_index/blob/main/demo/demo-horizontal.gif" alt="Scroll to index horizontal" width="300"height="540"></td>
-  
+    <td><img src="https://raw.githubusercontent.com/dinhhung1999/easy_scroll_to_index/main/demo/demo.gif" alt="Scroll to index vertical" width="300" height="540"></td>
+    <td><img src="https://raw.githubusercontent.com/dinhhung1999/easy_scroll_to_index/main/demo/demo-horizontal.gif" alt="Scroll to index horizontal" width="300"height="540"></td>
   </tr>
 </table>
 Example:
